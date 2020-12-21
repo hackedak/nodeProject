@@ -1,0 +1,18 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+   <%- include('./partials/navbar.ejs') %>
+
+   <!-- Contents -->
+   <div class="blogs content">
+        <h2>All Blogs</h2>
+        <% blogPosts.forEach(post =>{ %>
+          <a class="single" href="/blogs/<%= post._id %> ">
+          <h3 class="title" ><%=post.title %></h3>
+          <p class="snippet"><%=post.snippet %></p>
+          </a>
+        <% })%> 
+   </div>
+    <%- include('./partials/footer.ejs')%>
+</body>
+</html>
