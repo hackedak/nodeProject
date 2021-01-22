@@ -19,7 +19,7 @@ const app = express();
 app.use(express.static('public'));
 
 //connect to db
-const dbURI = 'mongodb+srv://9446415805:7306919697@cluster0.ftqbe.mongodb.net/nodetuts?retryWrites=true&w=majority';
+const dbURI = '';
 const port = 3000;
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then((result) => app.listen(port, ()=>console.log('server is running at port '+ port)))
